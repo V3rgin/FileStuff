@@ -10,8 +10,8 @@ public class Program {
     public static void main(String[] args) throws IOException {
         ArrayList<Pracownik> arrayList = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
+        arrayList = wczytajZPliku();
         while(true) {
-            arrayList = wczytajZPliku();
             System.out.println("1 - dodaj pracownika");
             System.out.println("2 - wyswietl pracownikow");
             System.out.println("3 - koniec");
@@ -57,7 +57,9 @@ public class Program {
 
     }
     public static void wyswietlPracownikow(ArrayList<Pracownik> arrayList) {
+        System.out.println("Pracownicy: ");
         for (int i = 0; i < arrayList.size(); i++){
+            System.out.print((i+1)+".");
             System.out.println(arrayList.get(i));
         }
     }
